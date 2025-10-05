@@ -1,0 +1,61 @@
+@import './variables';
+
+// Min-height: 100
+
+// Messages
+@mixin message-variant($bg, $border) {
+	background-color: $bg;
+	border: 1px solid $border;
+}
+
+// Strike Through
+@mixin strikethrough($color: $primary-color) {
+	position: relative;
+	display: inline-block;
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 100%;
+		height: 1px;
+		background-color: $color;
+	}
+}
+
+// Buttons
+@mixin button-style(
+	$font-size: 1.5rem,
+	$bg: $background-color,
+	$color: $secondary-color,
+	$padding: 0.5rem 1rem,
+	$width: 500px
+) {
+	font-size: $font-size;
+	padding: $padding;
+	color: $color;
+	background-color: $bg;
+	width: $width;
+}
+
+@mixin button-base($shadow: 0 0 5px 2px $primary-color) {
+	border-radius: 8px;
+	margin-top: 1rem;
+	box-shadow: $shadow;
+}
+
+// Feedback Bullets
+@mixin feedback-bullet($color, $symbol) {
+	content: $symbol;
+	color: whitesmoke;
+	background-color: $color;
+	border-radius: 50%;
+	font-size: 0.75rem;
+	width: 1.2rem;
+	height: 1.2rem;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	margin-right: 0.5rem;
+}

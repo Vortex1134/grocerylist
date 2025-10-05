@@ -1,0 +1,59 @@
+@import '../../styles/abstracts/variables';
+@import '../../styles/abstracts/mixins';
+
+.home-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 1rem;
+
+	.add-item {
+		font-size: 1.5rem;
+		padding: 0.5rem 1rem;
+		color: $secondary-color;
+		background-color: $background-color;
+		border: 0;
+		outline: none;
+	}
+
+	.grocery-list {
+		list-style-type: none;
+		font-size: 1.5rem;
+
+		.grocery-list-item {
+			border-top: 1px solid $border-color;
+			border-bottom: 1px solid $border-color;
+			padding: 0.5rem 0;
+			width: 500px;
+			cursor: pointer;
+
+			&:first-child {
+				border-top-width: 2px;
+			}
+
+			&:last-child {
+				border-bottom-width: 2px;
+			}
+		}
+
+		.deleted {
+			span {
+				@include strikethrough;
+				padding: 0 10px;
+				margin-left: 10px;
+			}
+		}
+	}
+
+	h2 {
+		font-size: 1.2rem;
+		background-color: $primary-color;
+		color: $background-color;
+		padding: 0.2rem 0.5rem;
+		width: 500px;
+	}
+
+	.button-text-only {
+		@include button-style($color: $secondary-half);
+	}
+}

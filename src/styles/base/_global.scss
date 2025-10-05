@@ -1,0 +1,21 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.message {
+	width: 500px;
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 1rem;
+	padding: 1rem 0;
+	font-size: 1.3rem;
+	border-radius: 10px;
+	color: $message-text;
+
+	&.success {
+		@include message-variant($success-bg, $success-border);
+	}
+
+	&.error {
+		@include message-variant($error-bg, $error-border);
+	}
+}

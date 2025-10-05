@@ -1,0 +1,24 @@
+// Main colors
+$primary-color: #cba987;
+$secondary-color: darken($primary-color, 10%);
+$background-color: #123456;
+$secondary-bg: #d5d5d5;
+
+// Half Alpha Colors
+$secondary-half: rgba($secondary-color, 0.5);
+
+// Borders
+$border-color: darken($background-color, 5%);
+
+// Feedback Colors
+$message-text: #f0f0f0;
+
+$success-bg: #198754;
+$success-border: #3ba976;
+
+$error-bg: #66191f;
+$error-border: #883b3f;
+
+// Bullet colors
+$s-bullet: #19a954;
+$e-bullet: #aa191f;

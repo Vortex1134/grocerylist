@@ -1,0 +1,26 @@
+@import '../../styles/abstracts/variables';
+@import '../../styles/abstracts/mixins';
+
+.register-container {
+	padding-top: 1rem;
+	.password-feedback {
+		list-style-type: none;
+		padding: 0.5rem 1rem;
+		margin-top: 1rem;
+		border-radius: 12px;
+		background-color: $secondary-bg;
+
+		li {
+			font-size: 0.9rem;
+			color: black;
+
+			&.valid::before {
+				@include feedback-bullet($s-bullet, '\2714');
+			}
+
+			&.invalid::before {
+				@include feedback-bullet($e-bullet, '\2716');
+			}
+		}
+	}
+}
